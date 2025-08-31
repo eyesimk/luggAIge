@@ -1,0 +1,12 @@
+Frame,Detected Objects
+frame_0000.jpg,"['bag', 'folded t-shirt', 'slippers']"
+frame_0002.jpg,"['bag', 'folded clothes', 'slippers']"
+frame_0007.jpg,"['bag', 'folded clothes', 'shoes', 'slippers']"
+frame_0008.jpg,"['suitcase', 'folded t-shirt', 'slippers']"
+frame_0012.jpg,"['bag', 'folded clothes', 'shoes', 'folded t-shirt', 'slippers', 'sneakers']"
+frame_0014.jpg,"['suitcase', 'sweater', 'folded clothes', 'folded t-shirt', 'slippers', 'sneakers']"
+frame_0016.jpg,"['hat', 'folded t-shirt', 'suitcase', 'sweater']"
+frame_0018.jpg,"['suitcase', 'cosmetic bag', 'folded clothes', 'folded t-shirt', 'travel pillow']"
+frame_0023.jpg,"['bag', 'towel', 'folded clothes', 'folded t-shirt', 'slippers', 'travel pillow']"
+frame_0038.jpg,"['toothpaste', 'folded clothes', 'folded t-shirt', 'cosmetic bag']"
+frame_0041.jpg,"['suitcase', 'cosmetic bag', 'toothbrush', 'lip balm', 'folded t-shirt']"
