@@ -2,3 +2,4 @@ extracted_frames
 venv
 videos
 filtered_frames_
+*.pt
