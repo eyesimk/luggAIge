@@ -17,19 +17,18 @@ try:
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
     sam.to(device=device)
     mask_generator = SamAutomaticMaskGenerator(
-        model=sam,     
+        model=sam,
         pred_iou_thresh=0.92,
         stability_score_thresh=0.95,
         min_mask_region_area=200,
     )
     print("Model loaded successfully.")
-    
 except FileNotFoundError:
     print(f"ERROR: SAM checkpoint file not found at '{sam_checkpoint}'")
     print("Please download the model checkpoint and place it in the correct directory.")
     exit()
 
-input_folder = "/Users/eren/Desktop/whats_in_my_baig/tarchi_frame"
+input_folder = ""
 output_folder = "tarchi_masks"
 os.makedirs(output_folder, exist_ok=True)
 
@@ -66,16 +65,22 @@ for image_path in image_paths:
 
     for i, mask_data in enumerate(masks):
         mask = mask_data['segmentation']  
-        bbox = mask_data['bbox'] 
-        x, y, w, h = bbox  
-        segmented_item_rgba = np.zeros((h, w, 4), dtype=np.uint8) 
+        bbox = mask_data['bbox']
+
+        x, y, w, h = bbox
+
+        segmented_item_rgba = np.zeros((h, w, 4), dtype=np.uint8)
+        
         image_crop = image_rgb[y:y+h, x:x+w]
         mask_crop = mask[y:y+h, x:x+w]
+
         segmented_item_rgba[:, :, :3] = image_crop
         segmented_item_rgba[:, :, 3] = mask_crop * 255
 
+    
         item_image = Image.fromarray(segmented_item_rgba)
         
+    
         save_path = os.path.join(output_folder, f"item_{mask_counter:04d}.png")
         item_image.save(save_path)
         
