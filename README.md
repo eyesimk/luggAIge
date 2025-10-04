@@ -1,6 +1,7 @@
 ***youtube link!!***
 
-https://www.youtube.com/watch?v=XxIaPTiDUZA
+  https://www.youtube.com/watch?v=XxIaPTiDUZA
+<img width="1206" height="279" alt="Screenshot 2025-10-04 at 13 52 04" src="https://github.com/user-attachments/assets/c4b56b3b-2c67-4a64-b80b-4c11c6eea26c" />
 
 This project is a computer vision AI project that helps you pack smarter. It looks inside your luggage and checks whether everything on your list is actually there.
 
